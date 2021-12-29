@@ -1,0 +1,6 @@
+framework module Pods_BillionBottle {
+  umbrella header "Pods-BillionBottle-umbrella.h"
+
+  export *
+  module * { export * }
+}
