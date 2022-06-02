@@ -1,6 +1,6 @@
 workflows:
   my-workflow:
-    name: My workflow name
+    name: build iOS
     instance_type: mac_mini
     max_build_duration: 60
     environment:
@@ -8,7 +8,6 @@ workflows:
         - group_name
       vars:
         PUBLIC_ENV_VAR: "value here"
-      flutter: stable
       xcode: latest
     cache:
       cache_paths:
@@ -22,12 +21,6 @@ workflows:
           source: true
       cancel_previous_builds: false
     scripts:
-      - ...
+      - echo "build success !!"
     artifacts:
       - build/**/outputs/bundle/**/*.aab
-    publishing:
-      email:
-        recipients:
-          - name@example.com
-      scripts:
-        - echo 'Post-publish script'
