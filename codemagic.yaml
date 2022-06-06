@@ -11,6 +11,7 @@ workflows:
             # APP_STORE_CONNECT_PRIVATE_KEY <-- Put your App Store Connect Private Key here
             # See the following link for more details - https://docs.codemagic.io/code-signing-yaml/signing-ios/
             # https://appstoreconnect.apple.com/access/api
+          - certificate_credentials # <-- (Includes CM_CERTIFICATE, CM_CERTIFICATE_PASSWORD, CM_PROVISIONING_PROFILE)
           - other
         vars:
           XCODE_WORKSPACE: "AppClipExample.xcworkspace" # <-- Put the name of your workspace here. 
